@@ -1,10 +1,10 @@
 # registry-scanner
 alpha repository
 
-Scripts are created to scan an insecure private Docker registry at port `5000` with the basic authentication from `brittanym/registry:2.0`.
+The module was created to scan an insecure private Docker registry at `localhost:5000` with basic authentication. This is the default authentication used in `brittanym/registry:2.0` which can be pulled from [Docker Hub](https://hub.docker.com/r/brittanym/registry), follow the instructions shown to modify the `.htpasswd` file.
 
 ## quick start
-To start, clone this repository.
+Clone this repository.
 
 ### go
 - In the local directory build the module `go build`
