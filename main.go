@@ -17,6 +17,7 @@ type ImageTag struct {
 }
 
 var (
+	url      = "https://localhost:5000/v2"
 	username = "admin"
 	password = "admin123"
 )
@@ -37,9 +38,9 @@ func getTags(repos string) {
 
 	for _, repository := range repositories {
 		length := reflect.ValueOf(repository)
-		for i := 0; i < length.Len(); i++ {
+		for j := 0; j < length.Len(); j++ {
 			req, err := http.NewRequest(
-				http.MethodGet, fmt.Sprintf("https://localhost:5000/v2/%s/tags/list", length.Index(i)), http.NoBody)
+				http.MethodGet, fmt.Sprintf("%s/%s/tags/list", url, length.Index(j)), http.NoBody)
 			if err != nil {
 				log.Fatal(err)
 				fmt.Println(err)
@@ -62,7 +63,7 @@ func getTags(repos string) {
 
 func scanRegistry() {
 	client := http.Client{Timeout: 5 * time.Second}
-	req, err := http.NewRequest(http.MethodGet, "https://localhost:5000/v2/_catalog", http.NoBody)
+	req, err := http.NewRequest(http.MethodGet, fmt.Sprintf("%s/_catalog", url), http.NoBody)
 	if err != nil {
 		log.Fatal(err)
 	}
