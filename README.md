@@ -1,7 +1,6 @@
 > [!WARNING]
 > This repository is no longer maintained, it has been integrated into the [simple-scanner](https://github.com/britdm/simple-scanner/tree/add-go-registry-scanner).
 # registry-scanner
-alpha repository
 
 The module was created to scan an insecure private Docker registry at `localhost:5000` with basic authentication. This is the default authentication used in `brittanym/registry:2.0` which can be pulled from [Docker Hub](https://hub.docker.com/r/brittanym/registry), follow the instructions shown there to modify the `.htpasswd` file.
 
@@ -19,5 +18,5 @@ Clone this repository.
 - Use the Dockerfile to build the registry-scanner Docker image with customized modifications or pull it from [Docker Hub](https://hub.docker.com/r/brittanym/registry-scanner/tags)
 
 ## future goals
-- Enable input for variables `registry url`, `username`, and `password`.
+- Support input for variables `registry url`, `username`, and `password`.
 - Binary files to simplify installation and use of the scanner.
