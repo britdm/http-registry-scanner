@@ -1,3 +1,5 @@
+> [!WARNING]
+> This repository is no longer maintained, it has been integrated into the [simple-scanner](https://github.com/britdm/simple-scanner/tree/add-go-registry-scanner).
 # registry-scanner
 alpha repository
 
